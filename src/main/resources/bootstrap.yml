@@ -1,0 +1,15 @@
+#spring:
+#  application:
+#    name: com-member-service
+#  cloud:
+#    config:
+#      label: master
+#      profile: config-file
+#      uri: http://localhost:8001/
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#

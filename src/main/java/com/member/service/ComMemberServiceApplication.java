@@ -1,11 +1,13 @@
 package com.member.service;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication
-@EnableEurekaClient
+
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class},scanBasePackages = "com.member.service.*")
+@MapperScan("com.member.service.dao")
 public class ComMemberServiceApplication {
 
     public static void main(String[] args) {
