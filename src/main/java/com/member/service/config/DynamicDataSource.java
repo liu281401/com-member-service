@@ -14,7 +14,7 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
     @Override
     protected Object determineCurrentLookupKey() {
         // 直接从ThreadLocal中获取拿到的数据源
-        log.info("DynamicDataSource.determineCurrentLookupKey curr data source 111:" + DynamicDataSourceHolder.getDataSource());
+        logger.info("DynamicDataSource.determineCurrentLookupKey curr data source 111:" + DynamicDataSourceHolder.getDataSource());
         return DynamicDataSourceHolder.getDataSource();
     }
 }
